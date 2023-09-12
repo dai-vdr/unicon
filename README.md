@@ -9,7 +9,7 @@ VD UNICON のメンテナンスは 2009/10/26 に 2.6.31 対応 patch を最後�
 
 ## はじめに
 
-UNICON は Linux のフレームバッファ上で CJK(中国語/日本語/韓国語)を表示するための仕組みです (**UTF-8 には未対応**)。[TurboLinux 北京オフィス](http://www.turbolinux.com.cn/) にて開発されていましたが、長らく更新が停止した状態になっています。[dai](./) が非公式に VD UNICON の名称でメンテナンスを続けていましたが、2009/10/26 に 2.6.31 対応 patch を最後に終了しました。
+UNICON は Linux のフレームバッファ上で CJK(中国語/日本語/韓国語)を表示するための仕組みです (**UTF-8 には未対応**)。[TurboLinux 北京オフィス](http://www.turbolinux.com.cn/) にて開発されていましたが、長らく更新が停止した状態になっています。[dai](https://vdr.jp/d/) が非公式に VD UNICON の名称でメンテナンスを続けていましたが、2009/10/26 に 2.6.31 対応 patch を最後に終了しました。
 
 この文章およびパッチなどは無保証です。UNICON による Linux 日本語 console テストに際し、[UNICON を使って日本語コンソールを実現しよう](http://web.archive.org/web/20060830162724/http://www.kip.iis.toyama-u.ac.jp/~shingo/unicon/) および [UNICON](http://web.archive.org/web/20050331013856/http://ppc.linux.or.jp/~ipenguin/unicon/) を参考にさせて頂きました。多謝。
 
@@ -53,7 +53,7 @@ kernel に フォントのパッチと VD UNICON 本体のパッチの両方を�
 
 UNICON はフレームバッファ上で動作するため、フレームバッファを利用するように bootloader で設定を行う。詳細は [Framebuffer HOWTO](http://www.linux.or.jp/JF/JFdocs/Framebuffer-HOWTO.html)、コンソールを高解像度で表示するには([GRUB編](http://www.atmarkit.co.jp/flinux/rensai/linuxtips/332vtextgrub.html), [LILO編](http://www.atmarkit.co.jp/flinux/rensai/linuxtips/333vtextlilo.html))を参照。
 
-2.6.24 以降、boot option に「[vt.default\_utf8=0](20080412.html#p01)」が必要となる場合がある。
+2.6.24 以降、boot option に「[vt.default\_utf8=0](https://vdr.jp/d/20080412.html#p01)」が必要となる場合がある。
 
 GNU GRUB では kernel 行に
 
@@ -154,4 +154,4 @@ devfs, udev を使っていれば必要ない。
 * [Turbolinux](http://www.turbolinux.co.jp/) - 現在 UNICON の公式メンテナンスを行っている。
 * [Linux日本語コンソール](http://www.bigfield.com/~hiroshi/jconsole.html) - jconsole。
 * [Japanese text patch for Linux console](http://achurch.org/jcon-e.html) - jcon。
-* [utf8-kernel](http://blog.chinaunix.net/u/13265/showart.php?id=1008020) - [UTF-8 console の本命](20091023.html#p02)か。
+* [utf8-kernel](http://blog.chinaunix.net/u/13265/showart.php?id=1008020) - [UTF-8 console の本命](https://vdr.jp/d/20091023.html#p02)か。
