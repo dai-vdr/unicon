@@ -17,14 +17,10 @@ UNICON は Linux のフレームバッファ上で CJK(中国語/日本語/韓�
 
 ### Kernel にパッチを当てる
 
-* フォント: [vd\_unicon-kernel-fonts-20040205.patch.bz2](https://vdlinux.osdn.jp/dists/UNICON/vd_unicon-kernel-fonts-20040205.patch.bz2)
+* フォント: [vd\_unicon-kernel-fonts-20040205.patch.bz2](https://gitlab.com/vdr-jp/unicon/uploads/82d1ca0a0d9389e4888acfe65397bd8d/vd_unicon-kernel-fonts-20040205.patch.bz2)
 
-* 2.6.31.* 用: [vd\_unicon-kernel-20091021-2.6.31.patch](https://vdlinux.osdn.jp/dists/UNICON/vd_unicon-kernel-20091021-2.6.31.patch)
-* 2.6.30.* 用: [vd\_unicon-kernel-20090615-2.6.30.patch](https://vdlinux.osdn.jp/dists/UNICON/vd_unicon-kernel-20090615-2.6.30.patch)
-
-* 2.4 用: [vd\_unicon-kernel-20040219-2.4.patch](https://vdlinux.osdn.jp/dists/UNICON/vd_unicon-kernel-20040219-2.4.patch)
-
-* 古いもの: [UNICON/](https://vdlinux.osdn.jp/dists/UNICON/)
+* 2.6.31.* 用: [vd\_unicon-kernel-20091021-2.6.31.patch](https://gitlab.com/vdr-jp/unicon/-/raw/main/vd_unicon-kernel-20091021-2.6.31.patch?ref_type=heads)
+* 2.4 用: [vd\_unicon-kernel-20040219-2.4.patch](https://gitlab.com/vdr-jp/unicon/-/raw/main/vd_unicon-kernel-20040219-2.4.patch?ref_type=heads)
 
 kernel に フォントのパッチと VD UNICON 本体のパッチの両方を当てる。
 
@@ -73,9 +69,9 @@ LILO では append 行に
 
 ### unicon-tools を取得
 
-[unicon-tools-0.0.0.20050707.tar.gz](https://vdlinux.osdn.jp/dists/UNICON/unicon-tools-0.0.0.20050707.tar.gz) を拾ってくる。
+[unicon-tools-0.0.0.20050707.tar.gz](https://gitlab.com/vdr-jp/unicon/uploads/3faa2515069412cf4fa1e8feb1a5011c/unicon-tools-0.0.0.20050707.tar.gz) を拾ってくる。
 
-これは [unicon-3.0.4-20010924.tar.gz](https://vdlinux.osdn.jp/dists/UNICON/unicon-3.0.4-20010924.tar.gz) ([Turbolinux 北京オフィス](http://www.turbolinux.com.cn/)ではもう配布されていないようなのでここで配布) に [vd\_unicon-userland-20031122.patch](https://vdlinux.osdn.jp/dists/UNICON/vd_unicon-userland-20031122.patch) ([UNICON を使って日本語コンソールを実現しよう](http://web.archive.org/web/20060830162724/http://www.kip.iis.toyama-u.ac.jp/~shingo/unicon/)、[UNICON](http://web.archive.org/web/20050331013856/http://ppc.linux.or.jp/~ipenguin/unicon/) にて提供されているパッチ及び dai による修正)を当て、必要な部分のみを取り出したものである。
+これは [unicon-3.0.4-20010924.tar.gz](https://gitlab.com/vdr-jp/unicon/uploads/cb8719f90b565cb0a75d348e597a85fb/unicon-3.0.4-20010924.tar.gz) ([Turbolinux 北京オフィス](http://www.turbolinux.com.cn/)ではもう配布されていないようなのでここで配布) に [vd\_unicon-userland-20031122.patch](https://gitlab.com/vdr-jp/unicon/-/raw/main/vd_unicon-userland-20031122.patch?ref_type=heads) ([UNICON を使って日本語コンソールを実現しよう](http://web.archive.org/web/20060830162724/http://www.kip.iis.toyama-u.ac.jp/~shingo/unicon/)、[UNICON](http://web.archive.org/web/20050331013856/http://ppc.linux.or.jp/~ipenguin/unicon/) にて提供されているパッチ及び dai による修正)を当て、必要な部分のみを取り出したものである。
 
 ### unicon-tools の make
 
@@ -137,13 +133,6 @@ devfs, udev を使っていれば必要ない。
 ### リンク
 
 このページへのリンクは [https://vdr.jp/d/unicon.html](https://vdr.jp/d/unicon.html) として頂けると覚えやすいし閲覧時の見栄えもよいと思います。
-
-### deb パッケージ
-
-あまりテストしていませんが deb パッケージを準備してあります。
-
-	deb     https://vdlinux.osdn.jp/ experimental kernel-patch-vd-unicon unicon-tools
-	deb-src https://vdlinux.osdn.jp/ experimental kernel-patch-vd-unicon unicon-tools
 
 ## 貢献者(順不同,敬称略)
 
